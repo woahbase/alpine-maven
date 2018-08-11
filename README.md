@@ -7,7 +7,7 @@
 This [image][233] containerizes [Maven][136], a build automation
 tool along with its [OpenJDK8][135] dependencies.
 
-**Current installed version is 3.5.3**
+**Current installed version is 3.5.4**
 
 Based on [Alpine Linux][131] from my [alpine-openjdk8][132] image with
 the [s6][133] init system [overlayed][134] in it.
@@ -187,7 +187,7 @@ docker build --rm --compress --force-rm \
   --build-arg PGID=1000 \
   --build-arg PUID=1000 \
   --build-arg USERNAME=woahbase \
-  --build-arg MAVEN_VERSION=3.5.3 \
+  --build-arg MAVEN_VERSION=3.5.4 \
   -t woahbase/alpine-maven:x86_64 \
   .
 ```

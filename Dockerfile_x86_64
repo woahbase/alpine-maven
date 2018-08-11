@@ -4,14 +4,14 @@ ARG USERNAME=frommakefile
 #
 FROM ${USERNAME}/${DOCKERSRC}:${ARCH}
 #
-ARG MAVEN_VERSION="3.5.3" 
+ARG MAVEN_VERSION="3.5.4" 
 ENV LANG=C.UTF-8 \
     M2_HOME=/usr/lib/mvn
 #
 RUN set -xe \
     && apk add -uU --no-cache curl openjdk8 tzdata \
     && curl -o /tmp/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
-        -jkSL "https://www.apache.org/dist/maven/maven-${MAVEN_VERSION##*.}/3.5.3/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz" \
+        -jkSL "https://www.apache.org/dist/maven/maven-${MAVEN_VERSION##*.}/3.5.4/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz" \
     && tar -C /tmp -xzf /tmp/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
     && mv /tmp/apache-maven-${MAVEN_VERSION} ${M2_HOME} \
     && ln -s "$M2_HOME/bin/mvn" /usr/bin/mvn \

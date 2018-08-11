@@ -7,7 +7,7 @@ SHCOMMAND := /bin/bash
 SVCNAME   := maven
 USERNAME  := woahbase
 
-MAVEN_VERSION := 3.5.3
+MAVEN_VERSION := 3.5.4
 
 PUID       := $(shell id -u)
 PGID       := $(shell id -g)# gid 100(users) usually pre exists
